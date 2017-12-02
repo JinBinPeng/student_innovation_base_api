@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.ExcelMapper">
+    <resultMap id="ExcelResult" type="com.yigong.student_innovation_base_api.entity.ExcelVo" autoMapping="true">
+        <id property="id" column="id"/>
+    </resultMap>
+    <insert id="addExcel">
+        <selectKey  keyProperty="id" resultType="string" order="BEFORE">SELECT UUID()</selectKey>
+        INSERT INTO base_excel (id,excel_url)
+        VALUE (#{id},#{excelUrl})
+    </insert>
+    <select id="findExcelById" resultMap="ExcelResult">
+        <include refid="findExcel"/>
+        WHERE
+        id=#{id}
+    </select>
+    <sql id="findExcel">
+        SELECT
+            base_excel.id,
+            UNIX_TIMESTAMP(base_excel.create_time) create_time,
+            base_excel.excel_url
+        FROM
+            base_excel
+    </sql>
+</mapper>

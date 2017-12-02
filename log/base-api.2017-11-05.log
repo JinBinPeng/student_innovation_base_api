@@ -1,0 +1,8 @@
+2017-11-05 00:22:12 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 11696 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-05 00:22:12 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-05 00:22:12 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-05 00:22:27 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 16.427 seconds (JVM running for 18.984) 

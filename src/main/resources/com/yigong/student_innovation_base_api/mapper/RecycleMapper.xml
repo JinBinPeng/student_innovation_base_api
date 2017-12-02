@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.RecycleMapper">
+    <resultMap id="RecycleResult" type="com.yigong.student_innovation_base_api.entity.RecycleVo">
+        <id column="recycler_id" property="recyclerId"/>
+        <association property="dynamic" column="dynamic_id" select="com.yigong.student_innovation_base_api.mapper.DynamicMapper.findByDynamicIdIsDelete"/>
+        <association property="project" column="project_id" select="com.yigong.student_innovation_base_api.mapper.ProjectMapper.findByProjectIdIsDelete"/>
+        <association property="operator" column="operator_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById"/>
+    </resultMap>
+    <insert id="saveRecycle">
+        <selectKey  keyProperty="recyclerId" resultType="string" order="BEFORE">SELECT UUID()</selectKey>
+          INSERT INTO base_recycle (recycler_id,recycler_type
+        <if test="dynamicId!=null and dynamicId!=''">
+            ,dynamic_id
+        </if>
+        <if test="projectId!=null and projectId!=''">
+            ,project_id
+        </if>
+        ,operator_id
+        )
+        VALUES (#{recyclerId},#{recyclerType}
+        <if test="dynamicId!=null and dynamicId!=''">
+            ,#{dynamicId}
+        </if>
+        <if test="projectId!=null and projectId!=''">
+            ,#{projectId}
+        </if>
+        ,#{operatorId}
+        )
+    </insert>
+    <select id="listRecycle" resultMap="RecycleResult">
+          <include refid="findRecycle"/>
+        ORDER BY
+        base_recycle.create_time DESC
+    </select>
+    <select id="findRecycleByRecyclerId" resultMap="RecycleResult">
+        <include refid="findRecycle"/>
+        WHERE
+        recycler_id=#{recyclerId}
+    </select>
+    <select id="listRecycleByCondition" resultMap="RecycleResult">
+        <include refid="findRecycle"/>
+        <where>
+            <if test="condition!=null and condition!=''" >
+                CONCAT(
+                base_recycle.recycler_type)
+                LIKE CONCAT('%',#{condition},'%')
+            </if>
+        </where>
+        ORDER BY
+        base_recycle.create_time DESC
+    </select>
+    <sql id="findRecycle">
+        SELECT
+            base_recycle.recycler_id,
+            base_recycle.recycler_type,
+            base_recycle.dynamic_id,
+            base_recycle.project_id,
+            base_recycle.operator_id,
+            UNIX_TIMESTAMP(base_recycle.create_time) create_time,
+            UNIX_TIMESTAMP(base_recycle.update_time) update_time
+        FROM
+            base_recycle
+    </sql>
+</mapper>

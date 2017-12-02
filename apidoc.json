@@ -1,0 +1,9 @@
+{
+  "name" : "StudentInnovationBase",
+  "version": "1.0.0",
+  "title": "基地APP与后台接口",
+  "description": "接口测试",
+  "template":{
+    "forceLanguage":"zh_cn"
+  }
+}

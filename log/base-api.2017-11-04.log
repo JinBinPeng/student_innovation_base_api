@@ -1,0 +1,727 @@
+2017-11-04 19:22:29 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 14100 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 19:22:29 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 19:22:29 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 19:22:38 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 11.206 seconds (JVM running for 17.308) 
+2017-11-04 19:23:19 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 15020 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 19:23:19 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 19:23:19 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 19:23:23 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.03 seconds (JVM running for 7.106) 
+2017-11-04 19:23:39 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:23:39 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:23:39 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.C.saveCheck!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.C.saveCheck!selectKey : 
+ ==> Parameters:  
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.C.saveCheck!selectKey : 
+ <==      Total: 1 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.mapper.CheckMapper.saveCheck : 
+ ==>  Preparing: INSERT INTO base_check (id,user_id,attend_id,check_ip,check_member_name) VALUES (?,?,?,?,?)  
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.mapper.CheckMapper.saveCheck : 
+ ==> Parameters: ba48c8a7-c152-11e7-af40-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String), 123.12.12.1(String), 张三(String) 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.mapper.CheckMapper.saveCheck : 
+ <==    Updates: 1 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ ==>  Preparing: SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check WHERE id=?  
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ ==> Parameters: ba48c8a7-c152-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <====      Total: 1 
+2017-11-04 19:23:40 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ <==      Total: 1 
+2017-11-04 19:42:16 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 10008 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 19:42:16 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 19:42:16 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 19:42:25 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 19.439 seconds (JVM running for 20.717) 
+2017-11-04 19:42:34 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:42:34 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:42:34 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 19:42:35 [http-nio-8080-exec-10] DEBUG c.y.s.m.C.saveCheck!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-04 19:42:35 [http-nio-8080-exec-10] DEBUG c.y.s.m.C.saveCheck!selectKey : 
+ ==> Parameters:  
+2017-11-04 19:42:35 [http-nio-8080-exec-10] DEBUG c.y.s.m.C.saveCheck!selectKey : 
+ <==      Total: 1 
+2017-11-04 19:42:35 [http-nio-8080-exec-10] DEBUG c.y.s.mapper.CheckMapper.saveCheck : 
+ ==>  Preparing: INSERT INTO base_check (id,user_id,attend_id,check_ip,check_member_name) VALUES (?,?,?,?,?)  
+2017-11-04 19:42:35 [http-nio-8080-exec-10] DEBUG c.y.s.mapper.CheckMapper.saveCheck : 
+ ==> Parameters: 40883217-c155-11e7-a4d7-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String), 123.12.12.1(String), 张三(String) 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.mapper.CheckMapper.saveCheck : 
+ <==    Updates: 1 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ ==>  Preparing: SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check WHERE id=?  
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ ==> Parameters: 40883217-c155-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <====      Total: 1 
+2017-11-04 19:42:36 [http-nio-8080-exec-10] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ <==      Total: 1 
+2017-11-04 19:44:07 [http-nio-8080-exec-5] ERROR c.y.s.config.GloablExceptionHandler : 
+ org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:207)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:374)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:314)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:352)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:940)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findByCondition : 
+ ==>  Preparing: SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check WHERE check_member_name=?  
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findByCondition : 
+ ==> Parameters: 张三(String) 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <====      Total: 1 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findByCondition : 
+ <==      Total: 2 
+2017-11-04 19:44:12 [http-nio-8080-exec-6] ERROR c.y.s.config.GloablExceptionHandler : 
+ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy61.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:82)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy66.findByCondition(Unknown Source)
+	at com.yigong.student_innovation_base_api.service.impl.CheckServiceImpl.findCheckByCondition(CheckServiceImpl.java:28)
+	at com.yigong.student_innovation_base_api.api.CheckApi.findUserByCondition(CheckApi.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 61 more
+ 
+2017-11-04 19:46:50 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 10192 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 19:46:50 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 19:46:50 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 19:46:54 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 6.016 seconds (JVM running for 8.265) 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.CheckMapper.findByCondition : 
+ ==>  Preparing: SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check WHERE check_member_name=?  
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.CheckMapper.findByCondition : 
+ ==> Parameters: 张三(String) 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <====      Total: 1 
+2017-11-04 19:46:58 [http-nio-8080-exec-3] DEBUG c.y.s.m.CheckMapper.findByCondition : 
+ <==      Total: 2 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.CheckMapper.listCheck_COUNT : 
+ ==>  Preparing: SELECT count(0) FROM (SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check) table_count  
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.CheckMapper.listCheck_COUNT : 
+ ==> Parameters:  
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.CheckMapper.listCheck_COUNT : 
+ <==      Total: 1 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.mapper.CheckMapper.listCheck : 
+ ==>  Preparing: SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check ORDER BY check_time DESC limit ?,?  
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.mapper.CheckMapper.listCheck : 
+ ==> Parameters: 0(Integer), 5(Integer) 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <====      Total: 1 
+2017-11-04 19:51:06 [http-nio-8080-exec-5] DEBUG c.y.s.mapper.CheckMapper.listCheck : 
+ <==      Total: 4 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.C.listCheckByCondition : 
+ ==>  Preparing: SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check WHERE CONCAT( base_check.check_member_name) LIKE CONCAT('%',?,'%') ORDER BY check_time DESC  
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.C.listCheckByCondition : 
+ ==> Parameters: 张三(String) 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <====      Total: 1 
+2017-11-04 19:56:42 [http-nio-8080-exec-9] DEBUG c.y.s.m.C.listCheckByCondition : 
+ <==      Total: 2 
+2017-11-04 20:09:13 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 2980 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 20:09:13 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 20:09:13 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 20:09:21 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 9.07 seconds (JVM running for 12.247) 
+2017-11-04 22:05:31 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 6404 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 22:05:31 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 22:05:31 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 22:05:37 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 6.711 seconds (JVM running for 10.283) 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ ==>  Preparing: UPDATE base_member SET password = ?, user_id=? WHERE user_id=?  
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ ==> Parameters: 5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ <==    Updates: 1 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:08:23 [http-nio-8080-exec-1] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:08:36 [http-nio-8080-exec-7] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:08:36 [http-nio-8080-exec-7] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:08:36 [http-nio-8080-exec-7] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:08:36 [http-nio-8080-exec-7] ERROR c.y.s.config.GloablExceptionHandler : 
+ java.lang.RuntimeException: token无效，请重新登录
+	at com.yigong.student_innovation_base_api.interceptor.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:73)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+2017-11-04 22:13:50 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 11152 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 22:13:50 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 22:13:50 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 22:13:55 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.2 seconds (JVM running for 6.961) 
+2017-11-04 22:13:58 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:13:58 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:13:58 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:13:58 [http-nio-8080-exec-2] ERROR c.y.s.config.GloablExceptionHandler : 
+ java.lang.RuntimeException: ResultObject(msg=你无权限进行此操作, code=400, data=null, success=false, error=null)
+	at com.yigong.student_innovation_base_api.interceptor.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:81)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+2017-11-04 22:19:19 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 1288 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 22:19:19 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 22:19:19 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 22:19:24 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.63 seconds (JVM running for 7.788) 
+2017-11-04 22:19:27 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:19:27 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:19:27 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:19:27 [http-nio-8080-exec-2] ERROR c.y.s.config.GloablExceptionHandler : 
+ java.lang.RuntimeException: 401
+	at com.yigong.student_innovation_base_api.interceptor.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:73)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+2017-11-04 22:25:15 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 10380 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 22:25:15 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 22:25:15 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 22:25:20 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 6.315 seconds (JVM running for 8.826) 
+2017-11-04 22:26:56 [http-nio-8080-exec-3] DEBUG c.y.s.m.U.findUserByCondition : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE phone_number = ? AND is_delete = 0  
+2017-11-04 22:26:56 [http-nio-8080-exec-3] DEBUG c.y.s.m.U.findUserByCondition : 
+ ==> Parameters: 15820638000(String) 
+2017-11-04 22:26:56 [http-nio-8080-exec-3] DEBUG c.y.s.m.U.findUserByCondition : 
+ <==      Total: 1 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ ==>  Preparing: UPDATE base_member SET password = ?, user_id=? WHERE user_id=?  
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ ==> Parameters: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ <==    Updates: 1 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:27:28 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:28:09 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:28:09 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:28:09 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:28:09 [http-nio-8080-exec-4] ERROR c.y.s.config.GloablExceptionHandler : 
+ java.lang.RuntimeException: 401
+	at com.yigong.student_innovation_base_api.interceptor.AuthenticationInterceptor.preHandle(AuthenticationInterceptor.java:73)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+2017-11-04 22:28:29 [http-nio-8080-exec-5] DEBUG c.y.s.m.U.findUserByCondition : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE phone_number = ? AND is_delete = 0  
+2017-11-04 22:28:29 [http-nio-8080-exec-5] DEBUG c.y.s.m.U.findUserByCondition : 
+ ==> Parameters: 15820638000(String) 
+2017-11-04 22:28:29 [http-nio-8080-exec-5] DEBUG c.y.s.m.U.findUserByCondition : 
+ <==      Total: 1 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ ==>  Preparing: SELECT base_check.id, base_check.user_id, base_check.attend_id, base_check.check_member_name, UNIX_TIMESTAMP(base_check.check_time) check_time, base_check.check_ip FROM base_check WHERE id=?  
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ ==> Parameters: ba48c8a7-c152-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ====> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <====      Total: 1 
+2017-11-04 22:28:47 [http-nio-8080-exec-6] DEBUG c.y.s.m.CheckMapper.findCheckById : 
+ <==      Total: 1 
+2017-11-04 22:35:35 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 10624 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-04 22:35:35 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-04 22:35:35 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-04 22:35:42 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 8.128 seconds (JVM running for 9.612) 

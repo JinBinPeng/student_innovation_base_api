@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.ProjectImageMapper">
+    <resultMap id="ProjectImageResult" type="com.yigong.student_innovation_base_api.entity.ProjectImageVo">
+        <id property="id" column="id"/>
+    </resultMap>
+    <insert id="saveProjectImage">
+        <selectKey  keyProperty="id" resultType="string" order="BEFORE">SELECT UUID()</selectKey>
+        INSERT INTO base_project_image
+        (id,image,project_id)
+        VALUES (#{id},#{image},#{projectId})
+    </insert>
+    <select id="findByProjectId" resultMap="ProjectImageResult">
+        <include refid="findProjectImage"/>
+        WHERE
+        project_id=#{projectId}
+    </select>
+    <sql id="findProjectImage">
+        SELECT
+            base_project_image.id,
+            base_project_image.image,
+            base_project_image.project_id,
+            UNIX_TIMESTAMP(base_project_image.create_time) create_time
+        FROM
+            base_project_image
+    </sql>
+</mapper>

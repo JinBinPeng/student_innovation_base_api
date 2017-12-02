@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.NoticeMapper">
+    <resultMap id="NoticeResult" type="com.yigong.student_innovation_base_api.entity.NoticeVo">
+        <id property="noticeId" column="notice_id"/>
+        <association property="sender" column="sender_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById"/>
+        <association property="receiver" column="receiver_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById"/>
+    </resultMap>
+    <insert id="saveNotice">
+        <selectKey  keyProperty="noticeId" resultType="string" order="BEFORE">SELECT UUID()</selectKey>
+        INSERT INTO base_notice (notice_id,sender_id,receiver_id,title,summary)
+        VALUES (#{noticeId},#{senderId},#{receiverId},#{title},#{summary})
+    </insert>
+    <update id="updateNoticeByNoticeId">
+        UPDATE base_notice
+        SET
+        is_read= 1
+        WHERE
+        notice_id=#{noticeId}
+    </update>
+    <delete id="deleteNoticeByNoticeId">
+        DELETE FROM base_notice
+        WHERE
+        notice_id=#{noticeId}
+    </delete>
+    <select id="listNotice" resultMap="NoticeResult">
+        <include refid="findNotice"/>
+        ORDER BY
+        create_time DESC
+    </select>
+    <select id="listNoticeByCondition" resultMap="NoticeResult">
+        <include refid="findNotice"/>
+        <where>
+            <if test="condition!=null and condition!=''" >
+                CONCAT(
+                base_notice.title,
+                base_notice.summary)
+                LIKE CONCAT('%',#{condition},'%')
+            </if>
+        </where>
+        ORDER BY
+        base_notice.create_time DESC
+    </select>
+    <select id="findNoticeByNoticeId" resultMap="NoticeResult">
+        <include refid="findNotice"/>
+        WHERE
+        notice_id=#{noticeId}
+    </select>
+    <sql id="findNotice">
+        SELECT
+            base_notice.notice_id,
+            base_notice.sender_id,
+            base_notice.receiver_id,
+            base_notice.title,
+            base_notice.summary,
+            base_notice.is_read,
+            UNIX_TIMESTAMP(base_notice.create_time) create_time,
+            UNIX_TIMESTAMP(base_notice.update_time) update_time
+        FROM
+            base_notice
+    </sql>
+</mapper>

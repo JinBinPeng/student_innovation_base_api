@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.AttendMapper">
+    <resultMap id="AttendResult" type="com.yigong.student_innovation_base_api.entity.AttendVo" autoMapping="true">
+        <id column="attend_id" property="attendId"/>
+        <association property="announcer" column="creator_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById" />
+        <association property="editor" column="editor_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById" />
+        <association property="userVo" column="attend_member_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById"/>
+    </resultMap>
+    <insert id="saveAttend">
+        <selectKey keyProperty="attendId" order="BEFORE" resultType="string">SELECT UUID()</selectKey>
+        INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id,create_time)
+        VALUES (#{attendId},#{attendMemberId},#{checkTime},#{attendTime},#{creatorId},now())
+    </insert>
+    <update id="updateAttend">
+        UPDATE base_attend
+        SET
+        <if test="attendMemberId!=null and attendMemberId!=''">
+            attend_member_id = #{attendMemberId},
+        </if>
+        <if test="checkTime!=null and checkTime!=''">
+            check_time = #{checkTime},
+        </if>
+        <if test="attendTime!=null and attendTime!=''">
+            attend_time = #{attendTime},
+        </if>
+        <if test="editorId!=null and editorId!=''">
+            editor_id = #{editorId}
+        </if>
+        WHERE
+        attend_id=#{attendId}
+    </update>
+    <delete id="deleteAttendByAttendId">
+        DELETE FROM base_attend
+        WHERE
+        attend_id=#{attendId}
+    </delete>
+    <select id="findAttendByAttendId" resultMap="AttendResult">
+          <include refid="findAttend"/>
+        WHERE
+        attend_id=#{attendId}
+    </select>
+    <select id="listAttend" resultMap="AttendResult">
+        <include refid="findAttend"/>
+        ORDER BY
+        base_attend.attend_time DESC ,
+        base_attend.check_time DESC,
+        base_attend.update_time
+    </select>
+    <select id="listAttendByCondition" resultMap="AttendResult">
+        <include refid="findAttend"/>
+        <where>
+            <if test="condition!=null and condition!=''" >
+                CONCAT(
+                base_attend.check_time,
+                base_attend.attend_time)
+                LIKE CONCAT('%',#{condition},'%')
+            </if>
+        </where>
+        ORDER BY
+        base_attend.create_time DESC
+    </select>
+    <sql id="findAttend">
+        SELECT
+            base_attend.attend_id,
+            base_attend.attend_member_id,
+            base_attend.check_time,
+            base_attend.attend_time,
+            UNIX_TIMESTAMP(base_attend.create_time) create_time,
+            UNIX_TIMESTAMP(base_attend.update_time) update_time,
+            base_attend.creator_id,
+            base_attend.editor_id
+        FROM
+            base_attend
+    </sql>
+</mapper>

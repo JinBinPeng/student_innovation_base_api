@@ -1,0 +1,18 @@
+2017-11-07 15:48:18 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 8368 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-07 15:48:18 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-07 15:48:33 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 18.163 seconds (JVM running for 26.148) 
+2017-11-07 15:57:09 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 8208 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-07 15:57:09 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-07 15:57:14 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 6.234 seconds (JVM running for 8.862) 
+2017-11-07 16:47:47 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 18408 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-07 16:47:47 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-07 16:47:58 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 12.091 seconds (JVM running for 14.965) 

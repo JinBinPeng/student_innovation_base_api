@@ -1,0 +1,281 @@
+2017-11-08 17:18:18 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 3232 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-08 17:18:18 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-08 17:18:18 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-08 17:18:31 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 14.686 seconds (JVM running for 21.966) 
+2017-11-08 17:21:13 [http-nio-8080-exec-7] ERROR c.y.s.config.GloablExceptionHandler : 
+ org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:207)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:374)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:314)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:352)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:940)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+2017-11-08 17:21:26 [http-nio-8080-exec-2] ERROR c.y.s.config.GloablExceptionHandler : 
+ com.qiniu.common.QiniuException: http://up-z2.qiniu.com/  
+{ResponseInfo:com.qiniu.http.Response@5d0215ca,status:614, reqId:92QAAEVDHXrcEfUU, xlog:body;TBLMGR:1;RS:2;CFGG:4;s.ph;s.put.tw;s.put.tr;s.put.tw;s.put.tr;s.ph;PFDS;PFDS:4;body;TBLMGR:1;UC:3;CFGG:5;rs4_3.sel;rwro.ins/file exists;MQ;RS.not:;RS:81/614;rs.put:82/file exists;rs-upload:;UP:181/614, xvia:, adress:up-z2.qiniu.com/14.152.37.7:80, duration:0.000000 s, error:file exists}  
+{"error":"file exists"}
+	at com.qiniu.http.Client.send(Client.java:270)
+	at com.qiniu.http.Client.multipartPost(Client.java:243)
+	at com.qiniu.http.Client.multipartPost(Client.java:211)
+	at com.qiniu.storage.FormUploader.upload(FormUploader.java:65)
+	at com.qiniu.storage.UploadManager.put(UploadManager.java:117)
+	at com.qiniu.storage.UploadManager.put(UploadManager.java:95)
+	at com.yigong.student_innovation_base_api.api.QiNiuApi.uploadInfoImages(QiNiuApi.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+2017-11-08 17:24:01 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 11524 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-08 17:24:01 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-08 17:24:01 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-08 17:25:07 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 18572 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-08 17:25:07 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-08 17:25:07 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-08 17:25:12 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.683 seconds (JVM running for 7.634) 
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.E.addExcel!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.E.addExcel!selectKey : 
+ ==> Parameters:  
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.E.addExcel!selectKey : 
+ <==      Total: 1 
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.mapper.ExcelMapper.addExcel : 
+ ==>  Preparing: INSERT INTO base_excel (id,excel_url) VALUE (?,?)  
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.mapper.ExcelMapper.addExcel : 
+ ==> Parameters: 2ace9a94-c467-11e7-a4d7-e4f89cdc0d1f(String), http://oui5txymt.bkt.clouddn.com/infos/1510133120552ceshi.xlsx(String) 
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.mapper.ExcelMapper.addExcel : 
+ <==    Updates: 1 
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.ExcelMapper.findExcelById : 
+ ==>  Preparing: SELECT base_excel.id, UNIX_TIMESTAMP(base_excel.create_time) create_time, base_excel.excel_url FROM base_excel WHERE id=?  
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.ExcelMapper.findExcelById : 
+ ==> Parameters: 2ace9a94-c467-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-08 17:27:51 [http-nio-8080-exec-6] DEBUG c.y.s.m.ExcelMapper.findExcelById : 
+ <==      Total: 1 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE member_name = ? AND is_delete = 0  
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==> Parameters: 666(String) 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByMemberName : 
+ <==      Total: 0 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE phone_number = ? AND is_delete = 0  
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==> Parameters: 15820600001(String) 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ <==      Total: 1 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE member_name = ? AND is_delete = 0  
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==> Parameters: 6666(String) 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByMemberName : 
+ <==      Total: 0 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE phone_number = ? AND is_delete = 0  
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==> Parameters: 15820600002(String) 
+2017-11-08 17:27:53 [http-nio-8080-exec-6] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ <==      Total: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.E.addExcel!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.E.addExcel!selectKey : 
+ ==> Parameters:  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.E.addExcel!selectKey : 
+ <==      Total: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.ExcelMapper.addExcel : 
+ ==>  Preparing: INSERT INTO base_excel (id,excel_url) VALUE (?,?)  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.ExcelMapper.addExcel : 
+ ==> Parameters: 02b2d640-c468-11e7-a4d7-e4f89cdc0d1f(String), http://oui5txymt.bkt.clouddn.com/infos/1510133612176ceshi.xlsx(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.ExcelMapper.addExcel : 
+ <==    Updates: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.ExcelMapper.findExcelById : 
+ ==>  Preparing: SELECT base_excel.id, UNIX_TIMESTAMP(base_excel.create_time) create_time, base_excel.excel_url FROM base_excel WHERE id=?  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.ExcelMapper.findExcelById : 
+ ==> Parameters: 02b2d640-c468-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.ExcelMapper.findExcelById : 
+ <==      Total: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE member_name = ? AND is_delete = 0  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==> Parameters: 666(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByMemberName : 
+ <==      Total: 0 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE phone_number = ? AND is_delete = 0  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==> Parameters: 15820600099(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ <==      Total: 0 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.saveUser!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.saveUser!selectKey : 
+ ==> Parameters:  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.saveUser!selectKey : 
+ <==      Total: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.UserMapper.saveUser : 
+ ==>  Preparing: INSERT INTO base_member (user_id,member_name,password,phone_number,department,grade,create_time) VALUES (?,?,?,?,?,?,now())  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.UserMapper.saveUser : 
+ ==> Parameters: 02d0a0aa-c468-11e7-a4d7-e4f89cdc0d1f(String), 666(String), a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3(String), 15820600099(String), 研发部(String), 2014(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.UserMapper.saveUser : 
+ <==    Updates: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: 02d0a0aa-c468-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE member_name = ? AND is_delete = 0  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByMemberName : 
+ ==> Parameters: 6666(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByMemberName : 
+ <==      Total: 0 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE phone_number = ? AND is_delete = 0  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ ==> Parameters: 15820600096(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.findUserByPhoneNumber : 
+ <==      Total: 0 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.saveUser!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.saveUser!selectKey : 
+ ==> Parameters:  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.U.saveUser!selectKey : 
+ <==      Total: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.UserMapper.saveUser : 
+ ==>  Preparing: INSERT INTO base_member (user_id,member_name,password,phone_number,department,grade,create_time) VALUES (?,?,?,?,?,?,now())  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.UserMapper.saveUser : 
+ ==> Parameters: 02dbe4dc-c468-11e7-a4d7-e4f89cdc0d1f(String), 6666(String), 5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5(String), 15820600096(String), 研发部(String), 2015(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.mapper.UserMapper.saveUser : 
+ <==    Updates: 1 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: 02dbe4dc-c468-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-08 17:33:54 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-08 17:45:44 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 7580 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-08 17:45:44 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-08 17:45:44 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-08 17:45:52 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 9.757 seconds (JVM running for 12.091) 

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.DynamicMapper">
+    <resultMap id="DynamicResult" type="com.yigong.student_innovation_base_api.entity.DynamicVo" autoMapping="true">
+        <id property="dynamicId" column="dynamic_id"/>
+        <result property="delete" column="is_delete"/>
+        <association property="announcer" column="announcer_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById" />
+    </resultMap>
+    <insert id="saveDynamic">
+        <selectKey  keyProperty="dynamicId" resultType="string" order="BEFORE">SELECT UUID()</selectKey>
+        INSERT INTO base_dynamic (dynamic_id,title, content, announcer_id
+        <if test="imageUrl!=null and imageUrl!=''">
+            ,image_url
+        </if>
+        ,create_time
+        )
+        VALUE (#{dynamicId},#{title},#{content},#{announcerId}
+        <if test="imageUrl!=null and imageUrl!=''">
+            ,#{imageUrl}
+        </if>
+        ,now()
+        )
+    </insert>
+
+    <update id="deleteDynamicBatch">
+        UPDATE base_dynamic
+        SET
+        is_delete = 1
+          WHERE
+        dynamic_id IN
+        <foreach collection="dynamicIds" item="dynamicIds" open="(" separator="," close=")">
+            #{dynamicIds}
+        </foreach>
+    </update>
+    <select id="findByDynamicId" resultMap="DynamicResult">
+        <include refid="findDynamic"/>
+        WHERE
+        dynamic_id=#{dynamicId}
+        AND is_delete = 0
+    </select>
+    <select id="listDynamic" resultMap="DynamicResult">
+        <include refid="findDynamic"/>
+        WHERE
+        is_delete = 0
+        ORDER BY
+        create_time DESC
+    </select>
+    <select id="findBatchByDynamicIds" resultMap="DynamicResult">
+        <include refid="findDynamic"/>
+        WHERE
+        is_delete = 0
+        AND
+        dynamic_id IN
+        <foreach collection="dynamicIds" item="dynamicIds" open="(" separator="," close=")">
+            #{dynamicIds}
+        </foreach>
+    </select>
+    <select id="listDynamicByCondition" resultMap="DynamicResult">
+        <include refid="findDynamic"/>
+        <where>
+           is_delete = 0
+            AND
+            <if test="condition!=null and condition!=''" >
+                CONCAT(
+                base_dynamic.title)
+                LIKE CONCAT('%',#{condition},'%')
+            </if>
+        </where>
+        ORDER BY
+        base_dynamic.create_time DESC
+    </select>
+    <select id="findByDynamicIdIsDelete" resultMap="DynamicResult" parameterType="java.lang.String">
+        <include refid="findDynamic"/>
+        WHERE
+            is_delete = 1
+            AND dynamic_id = #{_parameter}
+    </select>
+    <sql id="findDynamic">
+        SELECT
+            base_dynamic.dynamic_id,
+            base_dynamic.title,
+            base_dynamic.content,
+            base_dynamic.announcer_id,
+            base_dynamic.image_url,
+            UNIX_TIMESTAMP(base_dynamic.create_time) create_time,
+            UNIX_TIMESTAMP(base_dynamic.update_time) update_time,
+            base_dynamic.is_delete
+        FROM
+            base_dynamic
+    </sql>
+</mapper>

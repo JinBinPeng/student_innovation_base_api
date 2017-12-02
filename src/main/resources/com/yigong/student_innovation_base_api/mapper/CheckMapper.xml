@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.CheckMapper">
+    <resultMap id="CheckResult" type="com.yigong.student_innovation_base_api.entity.CheckVo" autoMapping="true">
+        <id property="id" column="id"/>
+        <association property="userVo" column="user_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById"/>
+        <association property="attendVo" column="attend_id" select="com.yigong.student_innovation_base_api.mapper.AttendMapper.findAttendByAttendId"/>
+    </resultMap>
+    <insert id="saveCheck">
+        <selectKey resultType="string" keyProperty="id" order="BEFORE">SELECT UUID()</selectKey>
+        INSERT INTO base_check (id,user_id,attend_id,check_ip,check_member_name)
+        VALUES (#{id},#{userId},#{attendId},#{checkIp},#{checkMemberName})
+    </insert>
+    <select id="findCheckById" resultMap="CheckResult">
+        <include refid="findCheck"/>
+        WHERE
+        id=#{id}
+    </select>
+    <select id="findByCondition" resultMap="CheckResult">
+        <include refid="findCheck"/>
+        <where>
+            <if test="checkMemberName!=null and checkMemberName!=''">
+                check_member_name=#{checkMemberName}
+            </if>
+        </where>
+    </select>
+    <select id="listCheck" resultMap="CheckResult">
+        <include refid="findCheck"/>
+        ORDER BY
+        check_time DESC
+    </select>
+    <select id="listCheckByCondition" resultMap="CheckResult">
+        <include refid="findCheck"/>
+        <where>
+            <if test="condition!=null and condition!=''" >
+                CONCAT(
+                base_check.check_member_name)
+                LIKE CONCAT('%',#{condition},'%')
+            </if>
+        </where>
+        ORDER BY
+        check_time DESC
+    </select>
+    <sql id="findCheck">
+        SELECT
+            base_check.id,
+            base_check.user_id,
+            base_check.attend_id,
+            base_check.check_member_name,
+            UNIX_TIMESTAMP(base_check.check_time) check_time,
+            base_check.check_ip
+        FROM
+            base_check
+    </sql>
+</mapper>

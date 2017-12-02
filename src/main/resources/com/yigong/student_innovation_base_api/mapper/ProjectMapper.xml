@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.ProjectMapper">
+    <resultMap id="ProjectResult" type="com.yigong.student_innovation_base_api.entity.ProjectVo" autoMapping="true">
+        <id property="projectId" column="project_id"/>
+        <result column="is_delete" property="delete"/>
+        <association property="announcer" column="creator_id" select="com.yigong.student_innovation_base_api.mapper.UserMapper.findUserById" />
+        <association property="projectImageVo" column="project_id" select="com.yigong.student_innovation_base_api.mapper.ProjectImageMapper.findByProjectId"/>
+        <association property="projectTeamVoList" column="project_id" select="com.yigong.student_innovation_base_api.mapper.ProjectTeamMapper.listProjectTeam"/>
+    </resultMap>
+    <insert id="saveProject">
+        <!--<selectKey resultType="string" keyProperty="projectId" order="BEFORE">SELECT UUID()</selectKey>-->
+        INSERT INTO base_project
+        (project_id,project_name,detail,creator_id,project_type,dead_line)
+        VALUES (#{projectId},#{projectName},#{detail},#{creatorId},#{projectType},FROM_UNIXTIME(#{deadLine}))
+    </insert>
+    <update id="deleteProjectBatch">
+        UPDATE base_project
+        SET
+        is_delete = 1
+          WHERE
+        project_id IN
+        <foreach collection="projectIds" item="projectIds" open="(" separator="," close=")">
+            #{projectIds}
+        </foreach>
+    </update>
+    <select id="findBatchByProjectIds" resultMap="ProjectResult">
+          <include refid="findProject"/>
+        WHERE
+        is_delete = 0
+        AND
+        project_id IN
+        <foreach collection="projectIds" item="projectIds" open="(" separator="," close=")">
+            #{projectIds}
+        </foreach>
+    </select>
+    <select id="listProject" resultMap="ProjectResult">
+          <include refid="findProject"/>
+        WHERE
+        is_delete = 0
+        ORDER BY
+        create_time DESC
+    </select>
+    <select id="findByProjectId" resultMap="ProjectResult">
+          <include refid="findProject"/>
+        WHERE
+        project_id=#{projectId}
+        AND is_delete = 0
+    </select>
+    <select id="listProjectByCondition" resultMap="ProjectResult">
+        <include refid="findProject"/>
+        <where>
+            is_delete = 0
+            AND
+            <if test="condition!=null and condition!=''" >
+                CONCAT(
+                base_project.project_name,
+                base_project.project_type)
+                LIKE CONCAT('%',#{condition},'%')
+            </if>
+        </where>
+        ORDER BY
+        base_project.create_time DESC
+    </select>
+    <select id="findByProjectIdIsDelete" resultMap="ProjectResult">
+        <include refid="findProject"/>
+        WHERE
+        is_delete = 1
+        AND project_id=#{_parameter}
+    </select>
+    <sql id="findProject">
+        SELECT
+            base_project.project_id,
+            base_project.project_name,
+            base_project.detail,
+            base_project.creator_id,
+            base_project.project_type,
+            UNIX_TIMESTAMP(base_project.create_time) create_time,
+            UNIX_TIMESTAMP(base_project.update_time) update_time,
+            UNIX_TIMESTAMP(base_project.dead_line) dead_line,
+            base_project.is_delete
+        FROM
+            base_project
+    </sql>
+</mapper>

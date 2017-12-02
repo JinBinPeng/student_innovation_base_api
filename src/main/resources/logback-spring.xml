@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <property name="LOG_FILE" value="log/wolfteeth-api.log" />
+    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="org.springframework.boot.web.filter" level="INFO"/>
+
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>[%-5level] %d{HH:mm:ss} %logger{36} %line: %msg %n</Pattern>
+            <charset>UTF-8</charset>
+            <!--解决中文乱码问题-->
+        </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>TRACE</level>
+        </filter>
+    </appender>
+
+    <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>log/base-api.log</File><!-- 最新的log文件名 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>log/base-api.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>30</maxHistory><!-- 保留 30 天的日志 -->
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} : %n %msg %n</Pattern>
+            <charset>UTF-8</charset>
+            <!--解决中文乱码问题-->
+        </encoder>
+    </appender>
+
+    <appender name="InfoDailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>log/base-api-info.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>base-api-info.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} : %n %msg %n</Pattern>
+            <charset>UTF-8</charset>
+            <!--解决中文乱码问题-->
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+    <!-- name 是项目包名，为了方便调试，输出 DEBUG 级别及其以上的log -->
+    <logger name="com.yigong.student_innovation_base_api" level="DEUBG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="dailyRollingFileAppender"/>
+        <appender-ref ref="InfoDailyRollingFileAppender" />
+    </logger>
+
+</configuration>

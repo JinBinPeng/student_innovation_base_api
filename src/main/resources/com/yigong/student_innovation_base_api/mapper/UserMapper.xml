@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yigong.student_innovation_base_api.mapper.UserMapper">
+    <resultMap id="UserResult" type="com.yigong.student_innovation_base_api.entity.UserVo" autoMapping="true">
+        <id column="user_id" property="userId"/>
+        <result column="is_delete" property="delete"/>
+    </resultMap>
+    <insert id="saveUser">
+        <selectKey resultType="string" keyProperty="userId" order="BEFORE">SELECT UUID()</selectKey>
+        INSERT INTO base_member (user_id,member_name,password,phone_number,department,grade,create_time)
+        VALUES (#{userId},#{memberName},#{password},#{phoneNumber},#{department},#{grade},now())
+    </insert>
+    <update id="updateUser">
+         UPDATE base_member
+         SET
+        <if test="memberName!=null and memberName!=''">
+            member_name = #{memberName},
+        </if>
+        <if test="password!=null and password!=''">
+            password = #{password},
+        </if>
+        <if test="phoneNumber!=null and phoneNumber!=''">
+            phone_number = #{phoneNumber},
+        </if>
+        <if test="department!=null and department!=''">
+            department = #{department},
+        </if>
+        <if test="grade!=null and grade!=''">
+            grade = #{grade},
+        </if>
+        <if test="imageUrl!=null and imageUrl!=''">
+            image_url = #{imageUrl},
+        </if>
+        <if test="userLevel!=null and userLevel!=''">
+            user_level = #{userLevel},
+        </if>
+        user_id=#{userId}
+        WHERE
+        user_id=#{userId}
+    </update>
+    <update id="deleteUser">
+        UPDATE base_member
+        SET
+            is_delete = 1
+        WHERE
+            user_id=#{userId}
+    </update>
+
+    <select id="findUserById" resultMap="UserResult">
+          <include refid="findUser"/>
+        WHERE user_id=#{userId}
+        AND
+        is_delete = 0
+    </select>
+    <select id="listUser" resultMap="UserResult">
+        <include refid="findUser"/>
+        WHERE
+        is_delete = 0
+        ORDER BY
+        create_time
+    </select>
+    <select id="findUserByCondition" resultMap="UserResult">
+        <include refid="findUser"/>
+        <where>
+        <if test="memberName!=null and memberName!=''">
+             member_name = #{memberName}
+        </if>
+        <if test="phoneNumber!=null and phoneNumber!=''">
+            OR phone_number = #{phoneNumber}
+        </if>
+        AND
+        is_delete = 0
+        </where>
+    </select>
+    <select id="findBatchByUserIds" resultMap="UserResult">
+        <include refid="findUser"/>
+        WHERE
+        is_delete = 0
+        AND
+        user_id IN
+        <foreach collection="userIds" item="userIds" open="(" separator="," close=")">
+            #{userIds}
+        </foreach>
+    </select>
+    <select id="listUserByCondition" resultMap="UserResult">
+        <include refid="findUser"/>
+        <where>
+            is_delete = 0
+            AND
+            <if test="condition!=null and condition!=''" >
+                CONCAT(
+                base_member.grade,
+                base_member.department,
+                base_member.user_level)
+                LIKE CONCAT('%',#{condition},'%')
+            </if>
+        </where>
+        ORDER BY
+        base_member.create_time DESC
+    </select>
+    <select id="findUserByPhoneNumber" resultMap="UserResult">
+        <include refid="findUser"/>
+        <where>
+            <if test="phoneNumber!=null and phoneNumber!=''">
+                phone_number = #{phoneNumber}
+            </if>
+            AND
+            is_delete = 0
+        </where>
+    </select>
+    <select id="findUserByMemberName" resultMap="UserResult">
+        <include refid="findUser"/>
+        <where>
+            <if test="memberName!=null and memberName!=''">
+                member_name = #{memberName}
+            </if>
+            AND
+            is_delete = 0
+        </where>
+    </select>
+    <sql id="findUser">
+        SELECT
+            base_member.user_id,
+            base_member.member_name,
+            base_member.`password`,
+            base_member.phone_number,
+            base_member.department,
+            base_member.grade,
+            UNIX_TIMESTAMP(base_member.create_time) create_time,
+            UNIX_TIMESTAMP(base_member.update_time) update_time,
+            base_member.image_url,
+            base_member.is_delete,
+            base_member.user_level
+        FROM
+            base_member
+    </sql>
+</mapper>

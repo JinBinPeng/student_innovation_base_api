@@ -1,0 +1,288 @@
+2017-11-07 15:48:18 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 8368 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-07 15:48:18 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-07 15:48:18 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-07 15:48:33 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 18.163 seconds (JVM running for 26.148) 
+2017-11-07 15:51:50 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:51 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:51:51 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findBatchByDynamicIds : 
+ ==>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 0 AND dynamic_id IN ( ? , ? , ? )  
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findBatchByDynamicIds : 
+ ==> Parameters: 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String), 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String), 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findBatchByDynamicIds : 
+ <==      Total: 3 
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.deleteDynamicBatch : 
+ ==>  Preparing: UPDATE base_dynamic SET is_delete = 1 WHERE dynamic_id IN ( ? , ? , ? )  
+2017-11-07 15:51:52 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.deleteDynamicBatch : 
+ ==> Parameters: 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String), 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String), 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.deleteDynamicBatch : 
+ <==    Updates: 3 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==> Parameters:  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ <==      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==>  Preparing: INSERT INTO base_recycle (recycler_id,recycler_type ,dynamic_id ,operator_id ) VALUES (?,? ,? ,? )  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==> Parameters: 90161c09-c390-11e7-a4d7-e4f89cdc0d1f(String), 0(Integer), 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ <==    Updates: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==>  Preparing: SELECT base_recycle.recycler_id, base_recycle.recycler_type, base_recycle.dynamic_id, base_recycle.project_id, base_recycle.operator_id, UNIX_TIMESTAMP(base_recycle.create_time) create_time, UNIX_TIMESTAMP(base_recycle.update_time) update_time FROM base_recycle WHERE recycler_id=?  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==> Parameters: 90161c09-c390-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 1 AND dynamic_id = ?  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====> Parameters: 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ <====      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ <==      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==> Parameters:  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ <==      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==>  Preparing: INSERT INTO base_recycle (recycler_id,recycler_type ,dynamic_id ,operator_id ) VALUES (?,? ,? ,? )  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==> Parameters: 904492e3-c390-11e7-a4d7-e4f89cdc0d1f(String), 0(Integer), 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ <==    Updates: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==>  Preparing: SELECT base_recycle.recycler_id, base_recycle.recycler_type, base_recycle.dynamic_id, base_recycle.project_id, base_recycle.operator_id, UNIX_TIMESTAMP(base_recycle.create_time) create_time, UNIX_TIMESTAMP(base_recycle.update_time) update_time FROM base_recycle WHERE recycler_id=?  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==> Parameters: 904492e3-c390-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 1 AND dynamic_id = ?  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====> Parameters: 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ <====      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ <==      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==> Parameters:  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ <==      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==>  Preparing: INSERT INTO base_recycle (recycler_id,recycler_type ,dynamic_id ,operator_id ) VALUES (?,? ,? ,? )  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==> Parameters: 905289bf-c390-11e7-a4d7-e4f89cdc0d1f(String), 0(Integer), 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ <==    Updates: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==>  Preparing: SELECT base_recycle.recycler_id, base_recycle.recycler_type, base_recycle.dynamic_id, base_recycle.project_id, base_recycle.operator_id, UNIX_TIMESTAMP(base_recycle.create_time) create_time, UNIX_TIMESTAMP(base_recycle.update_time) update_time FROM base_recycle WHERE recycler_id=?  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==> Parameters: 905289bf-c390-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 1 AND dynamic_id = ?  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====> Parameters: 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ <====      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:51:53 [http-nio-8080-exec-9] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ <==      Total: 1 
+2017-11-07 15:57:09 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 8208 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-07 15:57:09 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-07 15:57:09 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-07 15:57:14 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 6.234 seconds (JVM running for 8.862) 
+2017-11-07 15:57:32 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:32 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:57:32 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findBatchByDynamicIds : 
+ ==>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 0 AND dynamic_id IN ( ? , ? , ? )  
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findBatchByDynamicIds : 
+ ==> Parameters: 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String), 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String), 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findBatchByDynamicIds : 
+ <==      Total: 3 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.deleteDynamicBatch : 
+ ==>  Preparing: UPDATE base_dynamic SET is_delete = 1 WHERE dynamic_id IN ( ? , ? , ? )  
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.deleteDynamicBatch : 
+ ==> Parameters: 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String), 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String), 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.deleteDynamicBatch : 
+ <==    Updates: 3 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==> Parameters:  
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ <==      Total: 1 
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==>  Preparing: INSERT INTO base_recycle (recycler_id,recycler_type ,dynamic_id ,operator_id ) VALUES (?,? ,? ,? )  
+2017-11-07 15:57:33 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==> Parameters: 5b367750-c391-11e7-a4d7-e4f89cdc0d1f(String), 0(Integer), 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ <==    Updates: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==>  Preparing: SELECT base_recycle.recycler_id, base_recycle.recycler_type, base_recycle.dynamic_id, base_recycle.project_id, base_recycle.operator_id, UNIX_TIMESTAMP(base_recycle.create_time) create_time, UNIX_TIMESTAMP(base_recycle.update_time) update_time FROM base_recycle WHERE recycler_id=?  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==> Parameters: 5b367750-c391-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 1 AND dynamic_id = ?  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====> Parameters: 0e96a6bc-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ <====      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ <==      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==> Parameters:  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ <==      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==>  Preparing: INSERT INTO base_recycle (recycler_id,recycler_type ,dynamic_id ,operator_id ) VALUES (?,? ,? ,? )  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==> Parameters: 5b46387f-c391-11e7-a4d7-e4f89cdc0d1f(String), 0(Integer), 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ <==    Updates: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==>  Preparing: SELECT base_recycle.recycler_id, base_recycle.recycler_type, base_recycle.dynamic_id, base_recycle.project_id, base_recycle.operator_id, UNIX_TIMESTAMP(base_recycle.create_time) create_time, UNIX_TIMESTAMP(base_recycle.update_time) update_time FROM base_recycle WHERE recycler_id=?  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==> Parameters: 5b46387f-c391-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 1 AND dynamic_id = ?  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====> Parameters: 10696e88-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ <====      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ <==      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ ==> Parameters:  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.saveRecycle!selectKey : 
+ <==      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==>  Preparing: INSERT INTO base_recycle (recycler_id,recycler_type ,dynamic_id ,operator_id ) VALUES (?,? ,? ,? )  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ ==> Parameters: 5b6c03fe-c391-11e7-a4d7-e4f89cdc0d1f(String), 0(Integer), 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.RecycleMapper.saveRecycle : 
+ <==    Updates: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==>  Preparing: SELECT base_recycle.recycler_id, base_recycle.recycler_type, base_recycle.dynamic_id, base_recycle.project_id, base_recycle.operator_id, UNIX_TIMESTAMP(base_recycle.create_time) create_time, UNIX_TIMESTAMP(base_recycle.update_time) update_time FROM base_recycle WHERE recycler_id=?  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ ==> Parameters: 5b6c03fe-c391-11e7-a4d7-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====>  Preparing: SELECT base_dynamic.dynamic_id, base_dynamic.title, base_dynamic.content, base_dynamic.announcer_id, base_dynamic.image_url, UNIX_TIMESTAMP(base_dynamic.create_time) create_time, UNIX_TIMESTAMP(base_dynamic.update_time) update_time, base_dynamic.is_delete FROM base_dynamic WHERE is_delete = 1 AND dynamic_id = ?  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ ====> Parameters: 10f2eb71-80a4-11e7-a658-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ======> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <======      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.D.findByDynamicIdIsDelete : 
+ <====      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-07 15:57:34 [http-nio-8080-exec-2] DEBUG c.y.s.m.R.findRecycleByRecyclerId : 
+ <==      Total: 1 
+2017-11-07 16:47:47 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 18408 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-07 16:47:47 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-07 16:47:47 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-07 16:47:58 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 12.091 seconds (JVM running for 14.965) 

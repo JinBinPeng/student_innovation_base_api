@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    #公网IP:139.199.220.49
+    url: jdbc:mysql://182.254.222.51:3306/db_base
+    username: root
+    password: ipbase508
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+mybatis:
+  config-location: classpath:mybatis.xml
+  type-aliases-package: com.yigong.student_innovation_base_api.entity
+  mapper-locations: classpath*:com/yigong/student_innovation_base_api/mapper/*.xml
+debug: true
+#七牛云
+qiniu:
+  accessKey: Bx4bezJT0vWnE_gjvLeggEv6xfXG5NgjuvAcit8w
+  secretKey: 2mZZMYAZnkUo3dUQCojsUpSPi9zifEQvcFYDoODx
+  bucketname: student-innovation-base
+  url: http://oui5txymt.bkt.clouddn.com
+#MobSms短信平台
+mobSms:
+  verifyUrl: https://webapi.sms.mob.com/sms/verify
+  appkey: 216cdf118efc0
+  zone: 86
+server:
+  port: 8888

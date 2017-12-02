@@ -1,0 +1,618 @@
+2017-11-02 10:43:14 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 6688 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 10:43:14 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 10:43:14 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 10:43:23 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 10.423 seconds (JVM running for 11.616) 
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: ec1f2d76-bf77-11e7-af40-e4f89cdc0d1f(String), 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 星期四(String), 2017/11/2 10:44:30(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: ec1f2d76-bf77-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:45:10 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: ec30883f-bf77-11e7-af40-e4f89cdc0d1f(String), ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String), 星期四(String), 2017/11/2 10:44:30(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: ec30883f-bf77-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String) 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:45:11 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String), 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: 2b27405f-bf78-11e7-af40-e4f89cdc0d1f(String), ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b27405f-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String) 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:46:56 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==>  Preparing: UPDATE base_attend SET attend_member_id = ?, check_time = ?, attend_time = ?, editor_id = ? WHERE attend_id=?  
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ <==    Updates: 1 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:51:17 [http-nio-8080-exec-8] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:54:52 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 17484 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 10:54:52 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 10:54:52 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 10:54:57 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.814 seconds (JVM running for 8.173) 
+2017-11-02 10:55:06 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:55:06 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:55:06 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==>  Preparing: UPDATE base_attend SET attend_member_id = ?, check_time = ?, attend_time = ?, editor_id = ? WHERE attend_id=?  
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ <==    Updates: 1 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:55:07 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==>  Preparing: UPDATE base_attend SET attend_member_id = ?, check_time = ?, attend_time = ?, editor_id = ? WHERE attend_id=?  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ <==    Updates: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:57:45 [http-nio-8080-exec-4] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==>  Preparing: UPDATE base_attend SET attend_member_id = ?, check_time = ?, attend_time = ?, editor_id = ? WHERE attend_id=?  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ ==> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期五(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String), 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.AttendMapper.updateAttend : 
+ <==    Updates: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 2b1a7776-bf78-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:58:13 [http-nio-8080-exec-6] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: eb4076f4-bf79-11e7-af40-e4f89cdc0d1f(String), 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: eb4076f4-bf79-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: eb8656a0-bf79-11e7-af40-e4f89cdc0d1f(String), ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: eb8656a0-bf79-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:59:28 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 10:59:29 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:59:29 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 10:59:29 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String) 
+2017-11-02 10:59:29 [http-nio-8080-exec-10] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 10:59:29 [http-nio-8080-exec-10] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: 13c9f30c-bf7a-11e7-af40-e4f89cdc0d1f(String), 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 13c9f30c-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id) VALUES (?,?,?,?,?)  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: 13edd77b-bf7a-11e7-af40-e4f89cdc0d1f(String), ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 13edd77b-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String) 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:00:36 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 11:03:33 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 5280 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 11:03:33 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 11:03:33 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 11:03:38 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.757 seconds (JVM running for 7.864) 
+2017-11-02 11:03:42 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:03:42 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:03:42 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id,create_time) VALUES (?,?,?,?,?,now())  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String), 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 831a7e36-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==>  Preparing: SELECT UUID()  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ ==> Parameters:  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.saveAttend!selectKey : 
+ <==      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==>  Preparing: INSERT INTO base_attend (attend_id,attend_member_id,check_time,attend_time,creator_id,create_time) VALUES (?,?,?,?,?,now())  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ ==> Parameters: 834e317f-bf7a-11e7-af40-e4f89cdc0d1f(String), ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String), 2017/11/2 10:44:30(String), 星期四(String), cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.AttendMapper.saveAttend : 
+ <==    Updates: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend WHERE attend_id=?  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ ==> Parameters: 834e317f-bf7a-11e7-af40-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String) 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:03:43 [http-nio-8080-exec-2] DEBUG c.y.s.m.A.findAttendByAttendId : 
+ <==      Total: 1 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.A.listAttend_COUNT : 
+ ==>  Preparing: SELECT count(0) FROM (SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend) table_count  
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.A.listAttend_COUNT : 
+ ==> Parameters:  
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.A.listAttend_COUNT : 
+ <==      Total: 1 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.AttendMapper.listAttend : 
+ ==>  Preparing: SELECT base_attend.attend_id, base_attend.attend_member_id, base_attend.check_time, base_attend.attend_time, UNIX_TIMESTAMP(base_attend.create_time) create_time, UNIX_TIMESTAMP(base_attend.update_time) update_time, base_attend.creator_id, base_attend.editor_id FROM base_attend ORDER BY base_attend.attend_time DESC , base_attend.check_time DESC, base_attend.update_time limit ?,?  
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.AttendMapper.listAttend : 
+ ==> Parameters: 0(Integer), 5(Integer) 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: cd35f82e-9abf-11e7-bbc4-e4f89cdc0d1f(String) 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ====> Parameters: ccab4897-bb25-11e7-b018-e4f89cdc0d1f(String) 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <====      Total: 1 
+2017-11-02 11:06:31 [http-nio-8080-exec-5] DEBUG c.y.s.m.AttendMapper.listAttend : 
+ <==      Total: 2 
+2017-11-02 11:15:59 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 4436 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 11:15:59 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 11:15:59 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 11:16:07 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 9.897 seconds (JVM running for 11.585) 
+2017-11-02 21:38:49 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 5908 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 21:38:49 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 21:38:49 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 21:40:21 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 11444 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 21:40:21 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 21:40:21 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 21:40:26 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.152 seconds (JVM running for 7.033) 
+2017-11-02 21:41:03 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 7752 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 21:41:03 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 21:41:03 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 21:41:07 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 4.945 seconds (JVM running for 6.506) 
+2017-11-02 21:41:22 [http-nio-8080-exec-2] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ ==>  Preparing: UPDATE base_member SET password = ?, user_id=? WHERE user_id=?  
+2017-11-02 21:41:22 [http-nio-8080-exec-2] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ ==> Parameters: 0985b889a1fe4f4e1fb925061ac6fb2247f10875f5fcbe63eec2ab55ed68970e(String), 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String), 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 21:41:22 [http-nio-8080-exec-2] DEBUG c.y.s.mapper.UserMapper.updateUser : 
+ <==    Updates: 1 
+2017-11-02 21:41:22 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==>  Preparing: SELECT base_member.user_id, base_member.member_name, base_member.`password`, base_member.phone_number, base_member.department, base_member.grade, UNIX_TIMESTAMP(base_member.create_time) create_time, UNIX_TIMESTAMP(base_member.update_time) update_time, base_member.image_url, base_member.is_delete, base_member.user_level FROM base_member WHERE user_id=? AND is_delete = 0  
+2017-11-02 21:41:22 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ ==> Parameters: 5a71afab-7a75-11e7-9ddf-e4f89cdc0d1f(String) 
+2017-11-02 21:41:22 [http-nio-8080-exec-2] DEBUG c.y.s.m.UserMapper.findUserById : 
+ <==      Total: 1 
+2017-11-02 21:54:21 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 4272 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 21:54:21 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 21:54:21 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 21:54:29 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 9.665 seconds (JVM running for 12.154) 
+2017-11-02 21:56:10 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Starting StudentInnovationBaseApiApplication on DELL with PID 19228 (E:\IDEA2017\IDEA-Project\student_innovation_base_api\target\classes started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 21:56:10 [main] DEBUG c.y.s.StudentInnovationBaseApiApplication : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 21:56:10 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 21:56:14 [main] INFO  c.y.s.StudentInnovationBaseApiApplication : 
+ Started StudentInnovationBaseApiApplication in 5.032 seconds (JVM running for 7.125) 
+2017-11-02 21:56:46 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Starting StudentInnovationBaseApiApplicationTests on DELL with PID 4464 (started by dell1 in E:\IDEA2017\IDEA-Project\student_innovation_base_api) 
+2017-11-02 21:56:46 [main] DEBUG c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE 
+2017-11-02 21:56:46 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ No active profile set, falling back to default profiles: default 
+2017-11-02 21:56:53 [main] INFO  c.y.s.StudentInnovationBaseApiApplicationTests : 
+ Started StudentInnovationBaseApiApplicationTests in 7.967 seconds (JVM running for 9.197) 
